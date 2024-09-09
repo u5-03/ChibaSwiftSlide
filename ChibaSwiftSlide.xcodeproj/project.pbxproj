@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C3CD528E2C8D928500C9F9C0 /* SlideKit in Frameworks */ = {isa = PBXBuildFile; productRef = C3CD528D2C8D928500C9F9C0 /* SlideKit */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		C3CD527A2C8D924A00C9F9C0 /* ChibaSwiftSlide.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChibaSwiftSlide.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3CD528E2C8D928500C9F9C0 /* SlideKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = ChibaSwiftSlide;
 			packageProductDependencies = (
+				C3CD528D2C8D928500C9F9C0 /* SlideKit */,
 			);
 			productName = ChibaSwiftSlide;
 			productReference = C3CD527A2C8D924A00C9F9C0 /* ChibaSwiftSlide.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = C3CD52712C8D924A00C9F9C0;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				C3CD528C2C8D928500C9F9C0 /* XCRemoteSwiftPackageReference "SlideKit" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C3CD527B2C8D924A00C9F9C0 /* Products */;
 			projectDirPath = "";
@@ -270,10 +279,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yugo.sugiyama.ChibaSwiftSlide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Debug;
@@ -309,10 +319,11 @@
 				PRODUCT_BUNDLE_IDENTIFIER = yugo.sugiyama.ChibaSwiftSlide;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx xros xrsimulator";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2,7";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				XROS_DEPLOYMENT_TARGET = 2.0;
 			};
 			name = Release;
@@ -339,6 +350,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C3CD528C2C8D928500C9F9C0 /* XCRemoteSwiftPackageReference "SlideKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mtj0928/SlideKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C3CD528D2C8D928500C9F9C0 /* SlideKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3CD528C2C8D928500C9F9C0 /* XCRemoteSwiftPackageReference "SlideKit" */;
+			productName = SlideKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C3CD52722C8D924A00C9F9C0 /* Project object */;
 }
