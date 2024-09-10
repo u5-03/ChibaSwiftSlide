@@ -33,11 +33,8 @@ struct StrokeAnimationShapeView<S: Shape>: View {
     let duration: Duration
     let shape: S
     let isPaused: Bool
-    let fps: CGFloat = 60
-    private var frameAddtionValue: CGFloat {
-        return CGFloat(1 / (CGFloat(duration.components.seconds) * fps))
-    }
     @State private var animationProgress: CGFloat = 0
+    @State private var lastFrameDate: Date?
 
     init(
         shape: S,
@@ -61,7 +58,15 @@ struct StrokeAnimationShapeView<S: Shape>: View {
             )
                 .stroke(lineColor, lineWidth: lineWidth)
                 .onChange(of: context.date) { oldValue, newValue in
-                    animationProgress += frameAddtionValue
+                    if lastFrameDate == nil {
+                        lastFrameDate = newValue
+                    } else {
+                        let deltaTime = newValue.timeIntervalSince(oldValue)
+                        animationProgress += deltaTime / CGFloat(duration.components.seconds)
+                    }
+                }
+                .onChange(of: isPaused) { oldValue, newValue in
+                    lastFrameDate = nil
                 }
         }
     }
@@ -69,7 +74,7 @@ struct StrokeAnimationShapeView<S: Shape>: View {
 
 
 #Preview {
-    let duration = 100
+    let duration = 5
     VStack {
         StrokeAnimationShapeView(
             shape: UhooiShape(),
@@ -79,12 +84,14 @@ struct StrokeAnimationShapeView<S: Shape>: View {
         .aspectRatio(1, contentMode: .fit)
         StrokeAnimationShapeView(
             shape: PeanutsShape(),
-            duration: .seconds(duration)
+            duration: .seconds(duration),
+            isPaused: false
         )
         .aspectRatio(1, contentMode: .fit)
         StrokeAnimationShapeView(
             shape: ChibaShape(),
-            duration: .seconds(duration)
+            duration: .seconds(duration),
+            isPaused: false
         )
         .aspectRatio(1, contentMode: .fit)
     }
