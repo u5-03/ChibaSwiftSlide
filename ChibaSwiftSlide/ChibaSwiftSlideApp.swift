@@ -60,6 +60,7 @@ struct SlideConfiguration {
         MusicNoteAnimationSlide()
         CenterTextSlide(text: "今回はこの線を描くアニメーションの\n仕組みを解説します")
         TitleSlide()
+        ReadmeSlide()
         ChibaContentSlide()
         AnimationStructureSlide()
         CodeSlide(
