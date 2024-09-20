@@ -10,19 +10,32 @@ import SlideKit
 
 @Slide
 struct ChibaContentSlide: View {
+    @Phase var phase: SlidePhase
+    enum SlidePhase: Int, PhasedState {
+        case initial
+        case second
+        case third
+        case fourth
+    }
     var body: some View {
         ZStack {
             HeaderSlide("スライドに載せた千葉イラスト") {
-                Item("千葉ポートタワー", accessory: .number(1)) {
-                    Item("千葉県の中央区にある高さ約125ｍのタワー", accessory: .number(1))
-                    Item("いらすとやで出てきた笑", accessory: .number(2))
+                if phase.isAfter(.second) {
+                    Item("千葉ポートタワー", accessory: .number(1)) {
+                        Item("千葉県の中央区にある高さ約125ｍのタワー", accessory: .number(1))
+                        Item("いらすとやで出てきた笑", accessory: .number(2))
+                    }
                 }
-                Item("ピーナッツ", accessory: .number(2)) {
-                    Item("有名な農作物・お土産(日本シェア80%超えらしい)", accessory: .number(1))
+                if phase.isAfter(.third) {
+                    Item("ピーナッツ", accessory: .number(2)) {
+                        Item("有名な農作物・お土産(日本シェア80%超えらしい)", accessory: .number(1))
+                    }
                 }
-                Item("菜の花", accessory: .number(3)) {
-                    Item("千葉県の県花", accessory: .number(1))
-                    Item("千葉県民には、「なのはな体操」でもお馴染みらしい", accessory: .number(2))
+                if phase.isAfter(.fourth) {
+                    Item("菜の花", accessory: .number(3)) {
+                        Item("千葉県の県花", accessory: .number(1))
+                        Item("千葉県民には、「なのはな体操」でもお馴染みらしい", accessory: .number(2))
+                    }
                 }
             }
 

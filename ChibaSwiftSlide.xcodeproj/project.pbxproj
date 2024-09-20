@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C3CD528E2C8D928500C9F9C0 /* SlideKit in Frameworks */ = {isa = PBXBuildFile; productRef = C3CD528D2C8D928500C9F9C0 /* SlideKit */; };
+		C3D7A51E2C9D819C0006F8D7 /* PianoUI in Frameworks */ = {isa = PBXBuildFile; productRef = C3D7A51D2C9D819C0006F8D7 /* PianoUI */; };
+		C3D7A5202C9D819C0006F8D7 /* PianoUICore in Frameworks */ = {isa = PBXBuildFile; productRef = C3D7A51F2C9D819C0006F8D7 /* PianoUICore */; };
+		C3D7A5262C9D82CB0006F8D7 /* SlideKit in Frameworks */ = {isa = PBXBuildFile; productRef = C3D7A5252C9D82CB0006F8D7 /* SlideKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +29,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C3CD528E2C8D928500C9F9C0 /* SlideKit in Frameworks */,
+				C3D7A51E2C9D819C0006F8D7 /* PianoUI in Frameworks */,
+				C3D7A5202C9D819C0006F8D7 /* PianoUICore in Frameworks */,
+				C3D7A5262C9D82CB0006F8D7 /* SlideKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,7 +74,9 @@
 			);
 			name = ChibaSwiftSlide;
 			packageProductDependencies = (
-				C3CD528D2C8D928500C9F9C0 /* SlideKit */,
+				C3D7A51D2C9D819C0006F8D7 /* PianoUI */,
+				C3D7A51F2C9D819C0006F8D7 /* PianoUICore */,
+				C3D7A5252C9D82CB0006F8D7 /* SlideKit */,
 			);
 			productName = ChibaSwiftSlide;
 			productReference = C3CD527A2C8D924A00C9F9C0 /* ChibaSwiftSlide.app */;
@@ -101,7 +107,8 @@
 			mainGroup = C3CD52712C8D924A00C9F9C0;
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
-				C3CD528C2C8D928500C9F9C0 /* XCRemoteSwiftPackageReference "SlideKit" */,
+				C3D7A51C2C9D819C0006F8D7 /* XCRemoteSwiftPackageReference "PianoUI" */,
+				C3D7A5242C9D82CB0006F8D7 /* XCRemoteSwiftPackageReference "SlideKit" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = C3CD527B2C8D924A00C9F9C0 /* Products */;
@@ -352,7 +359,15 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		C3CD528C2C8D928500C9F9C0 /* XCRemoteSwiftPackageReference "SlideKit" */ = {
+		C3D7A51C2C9D819C0006F8D7 /* XCRemoteSwiftPackageReference "PianoUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/u5-03/PianoUI";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+		C3D7A5242C9D82CB0006F8D7 /* XCRemoteSwiftPackageReference "SlideKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mtj0928/SlideKit";
 			requirement = {
@@ -363,9 +378,19 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		C3CD528D2C8D928500C9F9C0 /* SlideKit */ = {
+		C3D7A51D2C9D819C0006F8D7 /* PianoUI */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = C3CD528C2C8D928500C9F9C0 /* XCRemoteSwiftPackageReference "SlideKit" */;
+			package = C3D7A51C2C9D819C0006F8D7 /* XCRemoteSwiftPackageReference "PianoUI" */;
+			productName = PianoUI;
+		};
+		C3D7A51F2C9D819C0006F8D7 /* PianoUICore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3D7A51C2C9D819C0006F8D7 /* XCRemoteSwiftPackageReference "PianoUI" */;
+			productName = PianoUICore;
+		};
+		C3D7A5252C9D82CB0006F8D7 /* SlideKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C3D7A5242C9D82CB0006F8D7 /* XCRemoteSwiftPackageReference "SlideKit" */;
 			productName = SlideKit;
 		};
 /* End XCSwiftPackageProductDependency section */

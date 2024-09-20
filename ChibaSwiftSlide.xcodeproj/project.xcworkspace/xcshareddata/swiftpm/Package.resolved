@@ -1,6 +1,15 @@
 {
-  "originHash" : "c46fef24a11a01831ae22b435dbef09f3474184fcaba07dec5aca2007ffc966f",
+  "originHash" : "b33d68e79dcd89224837c1b7ca2514f5d73a71499e81f62ec4825962e73d187f",
   "pins" : [
+    {
+      "identity" : "pianoui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/u5-03/PianoUI",
+      "state" : {
+        "branch" : "main",
+        "revision" : "30bb5a3bc31b961de50dd59540b580d88bd3f4b1"
+      }
+    },
     {
       "identity" : "slidekit",
       "kind" : "remoteSourceControl",

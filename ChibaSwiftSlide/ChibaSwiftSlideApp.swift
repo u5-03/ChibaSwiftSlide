@@ -56,7 +56,7 @@ struct SlideConfiguration {
     let slideIndexController = SlideIndexController(index: 0) {
         CenterTextSlide(text: "iOSDC2024")
         CenterTextSlide(text: "今年はLTをしました")
-        CenterTextSlide(text: "ピアノの発表でしたけど、スライド上で\nアニメーションで結構遊んだ")
+        PianoIntroductionSlide()
         MusicNoteAnimationSlide()
         CenterTextSlide(text: "今回はこの線を描くアニメーションの\n仕組みを解説します")
         TitleSlide()
