@@ -18,6 +18,7 @@ struct QuizDescriptionSlide: View {
             Item("1番多く得点した人が優勝です！", accessory: .number(4))
             Item("なんと優勝した人には千葉にちなんだ賞品が！", accessory: .number(5))
             Item("Figmaで作ったSVGベースなので、絵心に問題あり...!", accessory: .number(6))
+            Item("SNSなどでのクイズ結果のネタバレはご注意を！笑", accessory: .number(7))
         }
     }
 }
